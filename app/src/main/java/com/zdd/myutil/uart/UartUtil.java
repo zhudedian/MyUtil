@@ -16,6 +16,9 @@ public class UartUtil {
     private static FileInputStream mInputStream;
     private static SerialPort sp;
 
+    /*
+    开启
+     */
     public static void open(){
         if (sp!=null){
             return;
@@ -32,6 +35,9 @@ public class UartUtil {
         mOutputStream=(FileOutputStream) sp.getOutputStream();
         mInputStream=(FileInputStream) sp.getInputStream();
     }
+    /*
+    发送
+     */
     public static void send(String sendStr){
         try {
             mOutputStream.write(new String(sendStr).getBytes());
@@ -42,6 +48,9 @@ public class UartUtil {
         }
     }
 
+    /*
+    接收
+     */
     public static void recieve(ReceiveListener listener){
         int size;
 
@@ -50,6 +59,7 @@ public class UartUtil {
             if (mInputStream == null) return;
             size = mInputStream.read(buffer);
             if (size > 0) {
+                String info = new String(buffer, 0, size);
                 listener.received(buffer, size);
             }
         } catch (IOException e) {
