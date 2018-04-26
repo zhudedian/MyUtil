@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F:\zhudedian\test\myutil\MyUtil.iml" filepath="F:\zhudedian\test\myutil\MyUtil.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://F:\zhudedian\test\myutil\app\app.iml" filepath="F:\zhudedian\test\myutil\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myutil.iml" filepath="$PROJECT_DIR$/myutil.iml" />
     </modules>
   </component>
