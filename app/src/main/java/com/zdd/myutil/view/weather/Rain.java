@@ -143,23 +143,23 @@ public class Rain extends View {
 
         float rainsX1 = width-width1/2-rainsSpan*2;
         float rainsY1 = height1+10;
-        float rainsH1 = (height-height1-10)*0.4f;
+        float rainsH1 = width1*0.16f;
 
         float rainsX2 = width-width1/2-rainsSpan;
         float rainsY2 = height1+10;
-        float rainsH2 = (height-height1-10)*0.5f;
+        float rainsH2 = width1*0.20f;
 
         float rainsX3 = width-width1/2;
         float rainsY3 = height1+10;
-        float rainsH3 = (height-height1-10)*0.4f;
+        float rainsH3 = width1*0.16f;
 
         float rainsX4 = width-width1/2+rainsSpan;
         float rainsY4 = height1+10;
-        float rainsH4 = (height-height1-10)*0.65f;
+        float rainsH4 = width1*0.25f;
 
         float rainsX5 = width-width1/2+rainsSpan*2;
         float rainsY5 = height1+10;
-        float rainsH5 = (height-height1-10)*0.5f;
+        float rainsH5 = width1*0.20f;
 
 
 

@@ -17,6 +17,7 @@ import android.view.animation.LinearInterpolator;
 
 public class Lightning extends View {
     private Paint mPaint,mPaint2;
+    private int color = Color.WHITE;
     private float radius1, radius2,radius3,radius4,radius5;
     private int paintWidth = 5;
     private float angle = 0;
@@ -25,6 +26,14 @@ public class Lightning extends View {
     private float breakW = 10;
     private int width,width1,height,height1;
     private int paddingLeft,paddingRight,paddingTop,paddingBottom;
+
+    public Lightning(Context context, int color) {
+
+        this(context, null);
+        this.color = color;
+
+    }
+
     public Lightning(Context context) {
         this(context, null);
     }
@@ -35,9 +44,15 @@ public class Lightning extends View {
 
     public Lightning(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        initPaint();
+    }
 
+    private void initPaint(){
+        if (mPaint!=null){
+            return;
+        }
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(Color.WHITE);
+        mPaint.setColor(color);
         mPaint.setAlpha(255);
 
         mPaint.setStyle(Paint.Style.STROKE);
@@ -46,20 +61,17 @@ public class Lightning extends View {
         mPaint.setStrokeJoin(Paint.Join.ROUND);//直线
 
         mPaint2 = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint2.setColor(Color.WHITE);
+        mPaint2.setColor(color);
         mPaint2.setAlpha(255);
 
         mPaint2.setStyle(Paint.Style.FILL_AND_STROKE);
         mPaint2.setStrokeWidth(paintWidth/2);
         mPaint2.setStrokeCap(Paint.Cap.ROUND);//没有
         mPaint2.setStrokeJoin(Paint.Join.ROUND);//直线
-
     }
+
     private void init() {
-
-
-
-
+//        initPaint();
 
         paddingLeft = getPaddingLeft()+paintWidth/2;
         paddingRight = getPaddingRight()+paintWidth/2;
@@ -145,10 +157,10 @@ public class Lightning extends View {
         clipPath.moveTo(-paddingLeft,-paddingTop);
         clipPath.lineTo(width+paddingRight,-paddingTop);
         clipPath.lineTo(width+paddingRight,height1+cloudY+paintWidth);
-        clipPath.lineTo(width-width1*37/100,height1+cloudY+paintWidth);
-        clipPath.lineTo(width-width1*37/100,height1+cloudY+paintWidth-radius1);
-        clipPath.lineTo(width-width1*52/100,height1+cloudY+paintWidth-radius1);
-        clipPath.lineTo(width-width1*52/100,height1+cloudY+paintWidth);
+        clipPath.lineTo(width-width1*36/100,height1+cloudY+paintWidth);
+        clipPath.lineTo(width-width1*36/100,height1+cloudY+paintWidth-radius1);
+        clipPath.lineTo(width-width1*53/100,height1+cloudY+paintWidth-radius1);
+        clipPath.lineTo(width-width1*53/100,height1+cloudY+paintWidth);
         clipPath.lineTo(-paddingLeft,height1+cloudY+paintWidth);
         clipPath.close();
         canvas.clipPath(clipPath);
@@ -166,59 +178,25 @@ public class Lightning extends View {
         Path pathR = new Path();
         float lightA = 0.6f;
 
-        float lightX1 = width-width1*60/100;
+        float lightX1 = width-width1*62/100;
         float lightY1 = height1+10;
-        float lightH1 = (height-height1-10)*0.7f;
+        float lightH1 = width1*0.3f;
 
-        float lightX2 = width-width1*40/100;
-        float lightY2 = height1+10-width1*13/100;
-        float lightH2 = (height-height1-10)*1.0f;
+        float lightX2 = width-width1*39/100;
+        float lightY2 = height1+10-width1*15/100;
+        float lightH2 = width1*0.41f;
 
         //第一个闪电
-        if (breakp1<=-breakW) {
-            pathR.moveTo(lightX1, lightY1);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1<=breakW){
-            pathR.moveTo(lightX1-(breakp1+breakW)*lightA, lightY1+breakp1+breakW);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>breakW&&breakp1<lightH1/2-breakW){
+        if (breakp1<=breakW) {
+
+        }else if (breakp1>breakW&&breakp1<=lightH1/2+breakW){
             pathR.moveTo(lightX1, lightY1);
             pathR.lineTo(lightX1 - (breakp1-breakW) * lightA, lightY1 + breakp1-breakW);
-            pathR.moveTo(lightX1 - (breakp1+breakW) * lightA, lightY1 + breakp1+breakW);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>=lightH1/2-breakW&&breakp1<=lightH1/2+breakW){
-            pathR.moveTo(lightX1, lightY1);
-            pathR.lineTo(lightX1 - (breakp1-breakW) * lightA, lightY1 + breakp1-breakW);
-            pathR.moveTo(lightX1 - lightH1/2 * lightA+breakp1+breakW-lightH1/2, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>lightH1/2+breakW&&breakp1<lightH1/2+lightH1/2 * lightA-breakW){
+        }else if (breakp1>lightH1/2+breakW&&breakp1<=lightH1/2+lightH1/2 * lightA+breakW){
             pathR.moveTo(lightX1, lightY1);
             pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
             pathR.lineTo(lightX1 - lightH1/2 * lightA+breakp1-breakW-lightH1/2, lightY1 + lightH1/2);
-            pathR.moveTo(lightX1 - lightH1/2 * lightA+breakp1+breakW-lightH1/2, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>=lightH1/2+lightH1/2 * lightA-breakW&&breakp1<=lightH1/2+lightH1/2 * lightA+breakW){
-            pathR.moveTo(lightX1, lightY1);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA+breakp1-breakW-lightH1/2, lightY1 + lightH1/2);
-            pathR.moveTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA+breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA+breakW);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>lightH1/2+lightH1/2 * lightA+breakW&&breakp1<lightH1+lightH1/2 * lightA-breakW){
-            pathR.moveTo(lightX1, lightY1);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1, lightY1 + lightH1/2);
-            pathR.lineTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA-breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA-breakW);
-            pathR.moveTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA+breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA+breakW);
-            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
-        }else if (breakp1>=lightH1+lightH1/2 * lightA-breakW&&breakp1<lightH1+lightH1/2 * lightA+breakW){
+        }else if (breakp1>lightH1/2+lightH1/2 * lightA+breakW&&breakp1<lightH1+lightH1/2 * lightA+breakW){
             pathR.moveTo(lightX1, lightY1);
             pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
             pathR.lineTo(lightX1, lightY1 + lightH1/2);
@@ -230,50 +208,16 @@ public class Lightning extends View {
             pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
         }
         //第二个闪电
-        if (breakp2<=-breakW) {
-            pathR.moveTo(lightX2, lightY2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2<=breakW){
-            pathR.moveTo(lightX2-(breakp2+breakW)*lightA, lightY2+breakp2+breakW);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>breakW&&breakp2<lightH2/2-breakW){
+        if (breakp2<=breakW){
+
+        }else if (breakp2>breakW&&breakp2<=lightH2/2+breakW){
             pathR.moveTo(lightX2, lightY2);
             pathR.lineTo(lightX2 - (breakp2-breakW) * lightA, lightY2 + breakp2-breakW);
-            pathR.moveTo(lightX2 - (breakp2+breakW) * lightA, lightY2 + breakp2+breakW);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>=lightH2/2-breakW&&breakp2<=lightH2/2+breakW){
-            pathR.moveTo(lightX2, lightY2);
-            pathR.lineTo(lightX2 - (breakp2-breakW) * lightA, lightY2 + breakp2-breakW);
-            pathR.moveTo(lightX2 - lightH2/2 * lightA+breakp2+breakW-lightH2/2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>lightH2/2+breakW&&breakp2<lightH2/2+lightH2/2 * lightA-breakW){
+        }else if (breakp2>lightH2/2+breakW&&breakp2<=lightH2/2+lightH2/2 * lightA+breakW){
             pathR.moveTo(lightX2, lightY2);
             pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
             pathR.lineTo(lightX2 - lightH2/2 * lightA+breakp2-breakW-lightH2/2, lightY2 + lightH2/2);
-            pathR.moveTo(lightX2 - lightH2/2 * lightA+breakp2+breakW-lightH2/2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>=lightH2/2+lightH2/2 * lightA-breakW&&breakp2<=lightH2/2+lightH2/2 * lightA+breakW){
-            pathR.moveTo(lightX2, lightY2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA+breakp2-breakW-lightH2/2, lightY2 + lightH2/2);
-            pathR.moveTo(lightX2-(breakp2-lightH2/2-lightH2/2 * lightA+breakW)*lightA, lightY2 +breakp2-lightH2/2 * lightA+breakW);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>lightH2/2+lightH2/2 * lightA+breakW&&breakp2<lightH2+lightH2/2 * lightA-breakW){
-            pathR.moveTo(lightX2, lightY2);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2, lightY2 + lightH2/2);
-            pathR.lineTo(lightX2-(breakp2-lightH2/2-lightH2/2 * lightA-breakW)*lightA, lightY2 +breakp2-lightH2/2 * lightA-breakW);
-            pathR.moveTo(lightX2-(breakp2-lightH2/2-lightH2/2 * lightA+breakW)*lightA, lightY2 +breakp2-lightH2/2 * lightA+breakW);
-            pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
-        }else if (breakp2>=lightH2+lightH2/2 * lightA-breakW&&breakp2<lightH2+lightH2/2 * lightA+breakW){
+        }else if (breakp2>lightH2/2+lightH2/2 * lightA+breakW&&breakp2<lightH2+lightH2/2 * lightA+breakW){
             pathR.moveTo(lightX2, lightY2);
             pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2/2);
             pathR.lineTo(lightX2, lightY2 + lightH2/2);
@@ -284,6 +228,61 @@ public class Lightning extends View {
             pathR.lineTo(lightX2, lightY2 + lightH2/2);
             pathR.lineTo(lightX2 - lightH2/2 * lightA, lightY2 + lightH2);
         }
+
+//        if (breakp1<=-breakW) {
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1<=breakW){
+//            pathR.moveTo(lightX1-(breakp1+breakW)*lightA, lightY1+breakp1+breakW);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>breakW&&breakp1<lightH1/2-breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - (breakp1-breakW) * lightA, lightY1 + breakp1-breakW);
+//            pathR.moveTo(lightX1 - (breakp1+breakW) * lightA, lightY1 + breakp1+breakW);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>=lightH1/2-breakW&&breakp1<=lightH1/2+breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - (breakp1-breakW) * lightA, lightY1 + breakp1-breakW);
+//            pathR.moveTo(lightX1 - lightH1/2 * lightA+breakp1+breakW-lightH1/2, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>lightH1/2+breakW&&breakp1<lightH1/2+lightH1/2 * lightA-breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA+breakp1-breakW-lightH1/2, lightY1 + lightH1/2);
+//            pathR.moveTo(lightX1 - lightH1/2 * lightA+breakp1+breakW-lightH1/2, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>=lightH1/2+lightH1/2 * lightA-breakW&&breakp1<=lightH1/2+lightH1/2 * lightA+breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA+breakp1-breakW-lightH1/2, lightY1 + lightH1/2);
+//            pathR.moveTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA+breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA+breakW);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>lightH1/2+lightH1/2 * lightA+breakW&&breakp1<lightH1+lightH1/2 * lightA-breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA-breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA-breakW);
+//            pathR.moveTo(lightX1-(breakp1-lightH1/2-lightH1/2 * lightA+breakW)*lightA, lightY1 +breakp1-lightH1/2 * lightA+breakW);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }else if (breakp1>=lightH1+lightH1/2 * lightA-breakW&&breakp1<lightH1+lightH1/2 * lightA+breakW){
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA-(breakp1-lightH1-lightH1/2 * lightA-breakW)*lightA, lightY1 + breakp1-lightH1/2 * lightA-breakW);
+//        }else {
+//            pathR.moveTo(lightX1, lightY1);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1, lightY1 + lightH1/2);
+//            pathR.lineTo(lightX1 - lightH1/2 * lightA, lightY1 + lightH1);
+//        }
         canvas.drawPath(pathR,mPaint);
     }
 
@@ -293,8 +292,8 @@ public class Lightning extends View {
         }
 
         isStartedAnimate = true;
-        final ValueAnimator animator = ValueAnimator.ofFloat(-20, 200);
-        animator.setDuration(2000);
+        final ValueAnimator animator = ValueAnimator.ofFloat(-20, 500);
+        animator.setDuration(3000);
         animator.setRepeatCount(ValueAnimator.INFINITE);
         animator.setInterpolator(new LinearInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -306,8 +305,8 @@ public class Lightning extends View {
                  *
                  * 通过调用getAnimatedValue()获取到每个时间因子所产生的Value。
                  * */
-                breakp1 =  (float)animation.getAnimatedValue();
-                breakp2 = breakp1 - 100;
+                breakp2 =  (float)animation.getAnimatedValue();
+                breakp1 = breakp2 - 110;
 //                Log.i("edong","angle=" +angle);
                 postInvalidate();
             }
