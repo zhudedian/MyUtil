@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <timezone region="Asia" id="Shanghai" country="China" title="China Time"/>
+    <timezone region="Asia" id="Kabul" country="Afghanistan" title="Afghanistan Time"/>
+    <timezone region="Asia" id="Riyadh" country="Saudi Arabia" title="Arabian Standard Time"/>
+    <timezone region="Asia" id="Yerevan" country="Armenia" title="Armenia Standard Time"/>
+    <timezone region="Asia" id="Baku" country="Azerbaijan" title="Azerbaijan Standard Time"/>
+    <timezone region="Asia" id="Dhaka" country="Bangladesh" title="Bangladesh Standard Time"/>
+    <timezone region="Asia" id="Almaty" country="Kazakhstan" title="East Kazakhstan Standard Time"/>
+    <timezone region="Asia" id="Amman" country="Jordan" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Beirut" country="Lebanon" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Damascus" country="Syria" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Gaza" country="Palestine" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Hebron" country="Palestine" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Nicosia" country="Cyprus" title="Eastern European Standard Time"/>
+    <timezone region="Asia" id="Famagusta" country="Cyprus" title="GMT+03:00"/>
+    <timezone region="Asia" id="Istanbul" country="Turkey" title="GMT+03:00"/>
+    <timezone region="Asia" id="Barnaul" country="Russia" title="GMT+07:00"/>
+    <timezone region="Asia" id="Tomsk" country="Russia" title="GMT+07:00"/>
+    <timezone region="Asia" id="Pyongyang" country="North Korea" title="GMT+08:30"/>
+    <timezone region="Asia" id="Srednekolymsk" country="Russia" title="GMT+11:00"/>
+    <timezone region="Asia" id="Dubai" country="United Arab Emirates" title="Gulf Standard Time"/>
+    <timezone region="Asia" id="Hovd" country="Mongolia" title="Hovd Standard Time"/>
+    <timezone region="Asia" id="Kolkata" country="India" title="Idia Standard Time"/>
+    <timezone region="Asia" id="Tehran" country="Iran" title="Iran Standard Time"/>
+    <timezone region="Asia" id="Irkutsk" country="Russia" title="Irkutsk Standard Time"/>
+    <timezone region="Asia" id="Jerusalem" country="Israel" title="Israel Standard Time"/>
+    <timezone region="Asia" id="Tokyo" country="Japan" title="Japan Standard Time"/>
+    <timezone region="Asia" id="Seoul" country="South Korea" title="Korean Standard Time"/>
+    <timezone region="Asia" id="Krasnoyarsk" country="Russia" title="Krasnoyarsk Standard Time"/>
+    <timezone region="Asia" id="Novokuznetsk" country="Russia" title="Krasnoyarsk Standard Time"/>
+    <timezone region="Asia" id="Magadan" country="Russia" title="Magadan Standard Time"/>
+    <timezone region="Asia" id="Rangoon" country="Myanmar(Burma)" title="Myanmar Time"/>
+    <timezone region="Asia" id="Kathmandu" country="Nepal" title="Nepal Time"/>
+    <timezone region="Asia" id="Novosibirsk" country="Russia" title="Novosibirsk Standard Time"/>
+    <timezone region="Asia" id="Omsk" country="Russia" title="Omsk Standard Time"/>
+    <timezone region="Asia" id="Karachi" country="Pakistan" title="Pakistan Standard Time"/>
+    <timezone region="Asia" id="Kamchatka" country="Russia" title="Petropavlovsk-Kamchatski Standard Time"/>
+    <timezone region="Asia" id="Sakhalin" country="Russia" title="Sakhalin Standard Time"/>
+    <timezone region="Asia" id="Ulaanbaatar" country="Mongolia" title="Ulan Bator Standard Time"/>
+    <timezone region="Asia" id="Tashkent" country="Uzbekistan" title="Uzbekistan Standard Time"/>
+    <timezone region="Asia" id="Ust-Nera" country="Russia" title="Vladivostok Standard Time"/>
+    <timezone region="Asia" id="Vladivostok" country="Russia" title="Vladivostok Standard Time"/>
+    <timezone region="Asia" id="Jakarta" country="Indonesia" title="Western Indonesia Time"/>
+    <timezone region="Asia" id="Chita" country="Russia" title="Yakutsk Standard Time"/>
+    <timezone region="Asia" id="Khandyga" country="Russia" title="Yakutsk Standard Time"/>
+    <timezone region="Asia" id="Yakutsk" country="Russia" title="Yakutsk Standard Time"/>
+    <timezone region="Asia" id="Yekaterinburg" country="Russia" title="Yekaterinburg Standard Time"/>
+
+
+    <timezone region="North America" id="Anchorage"  country="United States" title="Alaska Standard Time"/>
+    <timezone region="North America" id="Metlakatla"  country="United States" title="Alaska Standard Time"/>
+    <timezone region="North America" id="Blanc-Sablon"  country="Canada" title="Atlantic Standard Time"/>
+    <timezone region="North America" id="Goose Bay"  country="Canada" title="Atlantic Standard Time"/>
+    <timezone region="North America" id="Grand Turk"  country="Turks and Caicos Islands" title="Atlantic Standard Time"/>
+    <timezone region="North America" id="Halifax"  country="Canada" title="Atlantic Standard Time"/>
+    <timezone region="North America" id="Santo Domingo"  country="Dominican Republic" title="Atlantic Standard Time"/>
+    <timezone region="North America" id="Bahia Banderas"  country="Mexico" title="Central Standard Time"/>
+    <timezone region="North America" id="Beulah,North Dakota"  country="United States" title="Central Standard Time"/>
+    <timezone region="North America" id="Chicago"  country="United States" title="Central Standard Time"/>
+    <timezone region="North America" id="Guatemala"  country="Guatemala" title="Central Standard Time"/>
+    <timezone region="North America" id="Matamoros"  country="Mexico" title="Central Standard Time"/>
+    <timezone region="North America" id="Mexico City"  country="Mexico" title="Central Standard Time"/>
+    <timezone region="North America" id="Havana"  country="Cuba" title="Cuba Standard Time"/>
+    <timezone region="North America" id="Ittoqqortoormiit"  country="Greenland" title="East Greenland Standard Time"/>
+    <timezone region="North America" id="Atikokan"  country="Canada" title="Eastern Standard Time"/>
+    <timezone region="North America" id="Cancun"  country="Mexico" title="Eastern Standard Time"/>
+    <timezone region="North America" id="Nassau"  country="Bahamas" title="Eastern Standard Time"/>
+    <timezone region="North America" id="New York"  country="United States" title="Eastern Standard Time"/>
+    <timezone region="North America" id="Panama"  country="Panama" title="Eastern Standard Time"/>
+    <timezone region="North America" id="Port-au-Prince"  country="Haiti" title="Eastern Standard Time"/>
+    <timezone region="North America" id="Danmarkshavn"  country="Greenland" title="Greenwich Mean Time"/>
+    <timezone region="North America" id="Adak"  country="United States" title="Hawaii-Aleutian Standard Time"/>
+    <timezone region="North America" id="Honolulu"  country="United States" title="Hawaii-Aleutian Standard Time"/>
+    <timezone region="North America" id="Chihuahua"  country="Mexico" title="Mexican Pacific Standard Time"/>
+    <timezone region="North America" id="Denver"  country="United States" title="Mountain Standard Time"/>
+    <timezone region="North America" id="Fort Nelson"  country="Canada" title="Mountain Standard Time"/>
+    <timezone region="North America" id="Ojinaga"  country="Mexico" title="Mountain Standard Time"/>
+    <timezone region="North America" id="Phoenix"  country="United States" title="Mountain Standard Time"/>
+    <timezone region="North America" id="St. John's"  country="Canada" title="Newfoundland Standard Time"/>
+    <timezone region="North America" id="Los Angeles"  country="United States" title="Pacific Standard Time"/>
+    <timezone region="North America" id="Tijuana"  country="Mexico" title="Pacific Standard Time"/>
+    <timezone region="North America" id="Miquelon"  country="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon Standard Time"/>
+    <timezone region="North America" id="Nuuk"  country="Greenland" title="West Greenland Standard Time"/>
+
+    <timezone region="United States" id="Anchorage"  country="United States" title="Alaska Standard Time"/>
+    <timezone region="United States" id="Chicago"  country="United States" title="Central Standard Time"/>
+    <timezone region="United States" id="New York"  country="United States" title="Eastern Standard Time"/>
+    <timezone region="United States" id="Adak"  country="United States" title="Hawaii-Aleutian Standard Time"/>
+    <timezone region="United States" id="Honolulu"  country="United States" title="Hawaii-Aleutian Standard Time"/>
+    <timezone region="United States" id="Denver"  country="United States" title="Mountain Standard Time"/>
+    <timezone region="United States" id="Phoenix"  country="United States" title="Mountain Standard Time"/>
+    <timezone region="United States" id="Los Angeles"  country="United States" title="Pacific Standard Time"/>
+
+
+    <timezone region="Africa" id="Ceuta"  country="Spain" title="Central European Standard Time"/>
+    <timezone region="Africa" id="Nairobi"  country="Kenya" title="East Africa Time"/>
+    <timezone region="Africa" id="Cairo"  country="Egypt" title="Eastern European Standard Time"/>
+    <timezone region="Africa" id="Tripoli"  country="Libya" title="Eastern European Standard Time"/>
+    <timezone region="Africa" id="Abidjan"  country="Cote d'lvoire" title="Greenwich Mean Time"/>
+    <timezone region="Africa" id="Johannesburg"  country="South Africa" title="South Africa Standard Time"/>
+    <timezone region="Africa" id="Lagos"  country="Nigeria" title="West Africa Standard Time"/>
+    <timezone region="Africa" id="Windhoek"  country="Namibia" title="West Africa Standard Time"/>
+    <timezone region="Africa" id="Casablanca"  country="Morocco" title="Western European Standard Time"/>
+
+
+    <timezone region="Antarctica" id="Casey"  country="Antarctica" title="Casey Time"/>
+    <timezone region="Antarctica" id="Davis"  country="Antarctica" title="Davis Time"/>
+    <timezone region="Antarctica" id="Dumont d'Urville"  country="Antarctica" title="Dumont-d'Urville Time"/>
+    <timezone region="Antarctica" id="Palmer"  country="Antarctica" title="GMT-03:00"/>
+    <timezone region="Antarctica" id="Troll"  country="Antarctica" title="Greenwich Mean Time"/>
+    <timezone region="Antarctica" id="Macquarie"  country="Antarctica" title="Macquarie Island Time"/>
+    <timezone region="Antarctica" id="Mawson"  country="Antarctica" title="Mawson Time"/>
+    <timezone region="Antarctica" id="McMurdo"  country="Antarctica" title="New Zealand Standard Time"/>
+    <timezone region="Antarctica" id="Rothera"  country="Antarctica" title="Rothera Time"/>
+    <timezone region="Antarctica" id="Syowa"  country="Antarctica" title="Syowa Time"/>
+    <timezone region="Antarctica" id="Vostok"  country="Antarctica" title="Vostok Time"/>
+
+
+    <timezone region="Atlantic Ocean" id="Bermuda"  country="Bermuda" title="Atlantic Standard Time"/>
+    <timezone region="Atlantic Ocean" id="Azores"  country="Portugal" title="Azores Standard Time"/>
+    <timezone region="Atlantic Ocean" id="Cape Verde"  country="Cape Verde" title="Cape Verde Standard Time"/>
+    <timezone region="Atlantic Ocean" id="Stanley"  country="Falkland Islands(Islas Malvinas)" title="Falkland Islands Standard Time"/>
+    <timezone region="Atlantic Ocean" id="Reykjavik"  country="Iceland" title="Greenwich Mean Time"/>
+    <timezone region="Atlantic Ocean" id="South Georgia"  country="South Georgia &amp; South Sandwich Islands" title="South Georgia Time"/>
+    <timezone region="Atlantic Ocean" id="Canary"  country="Spain" title="Western European Standard Time"/>
+
+
+    <timezone region="Australia" id="Adelaide"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Darwin"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Eucla"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Brisbane"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Sydney"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Perth"  country="Australia" title="Australian Central Standard Time"/>
+    <timezone region="Australia" id="Lord Howe"  country="Australia" title="Lord Howe Standard Time"/>
+
+
+    <timezone region="Europe" id="Paris"  country="France" title="Central European Standard Time"/>
+    <timezone region="Europe" id="Athens"  country="Greece" title="Eastern European Standard Time"/>
+    <timezone region="Europe" id="Chisinau"  country="Moldova" title="Eastern European Standard Time"/>
+    <timezone region="Europe" id="Kaliningrad"  country="Russia" title="Eastern European Standard Time"/>
+    <timezone region="Europe" id="Nicosia"  country="Cyprus" title="Eastern European Standard Time"/>
+    <timezone region="Europe" id="Istanbul"  country="Turkey" title="GMT+03:00"/>
+    <timezone region="Europe" id="Astrakhan"  country="Russia" title="GMT+04:00"/>
+    <timezone region="Europe" id="Saratov"  country="Russia" title="GMT+04:00"/>
+    <timezone region="Europe" id="London"  country="United Kingdom" title="Greenwich Mean Time"/>
+    <timezone region="Europe" id="Minsk"  country="Belarus" title="Moscow Standard Time"/>
+    <timezone region="Europe" id="Moscow"  country="Russia" title="Moscow Standard Time"/>
+    <timezone region="Europe" id="Simferopol"  country="Ukraine" title="Moscow Standard Time"/>
+    <timezone region="Europe" id="Samara"  country="Ruddis" title="Samara Standard Time"/>
+
+
+    <timezone region="Indian Ocean" id="Christmas"  country="Christmas Island" title="Christmas Island Time"/>
+    <timezone region="Indian Ocean" id="Cocos"  country="Cocos(Keeling) Island" title="Cocos Island Time"/>
+    <timezone region="Indian Ocean" id="Antananarivo"  country="Madagascar" title="East Africa Time"/>
+    <timezone region="Indian Ocean" id="Chagos"  country="British Indian Ocean Territory" title="Indian Ocean Time"/>
+    <timezone region="Indian Ocean" id="Maldives" country="Maldives" title="Maldives Time"/>
+    <timezone region="Indian Ocean" id="Mauritius" country="Mauritius" title="Mauritius Standard Time"/>
+    <timezone region="Indian Ocean" id="Reunion" country="Reunion" title="Reunion Time"/>
+
+
+    <timezone region="Pacific Ocean" id="Guam" country="Guam" title="Chamorro Standard Time"/>
+    <timezone region="Pacific Ocean" id="Chatham" country="New Zealand" title="Chatham Standard Time"/>
+    <timezone region="Pacific Ocean" id="Easter" country="Chile" title="Easter Island Standard Time"/>
+    <timezone region="Pacific Ocean" id="Fiji" country="Fiji" title="Fiji Standard Time"/>
+    <timezone region="Pacific Ocean" id="Bougainville" country="Papua New Guinea" title="GMT+11:00"/>
+    <timezone region="Pacific Ocean" id="Apia" country="Samoa" title="GMT+13:00"/>
+    <timezone region="Pacific Ocean" id="Galapagos" country="Ecuador" title="Galapagos Time"/>
+    <timezone region="Pacific Ocean" id="Gambier" country="French Polynesia" title="Gambier Time"/>
+    <timezone region="Pacific Ocean" id="Tarawa" country="Kiribati" title="Gilbert Islands Time"/>
+    <timezone region="Pacific Ocean" id="Honolulu" country="United States" title="Hawaii-Aleutian Standard Time"/>
+    <timezone region="Pacific Ocean" id="Kiritimati" country="Kiribati" title="Line Islands Time"/>
+    <timezone region="Pacific Ocean" id="Marquesas" country="French Polynesia" title="Marquesas Time"/>
+    <timezone region="Pacific Ocean" id="Noumea" country="New Caledonia" title="New Caledonia Standard Time"/>
+    <timezone region="Pacific Ocean" id="Auckland" country="New Zealand" title="New Zealand Standard Time"/>
+    <timezone region="Pacific Ocean" id="Norfolk" country="Norfolk Island" title="New Zealand Standard Time"/>
+    <timezone region="Pacific Ocean" id="Palau" country="Palau" title="Palau Time"/>
+    <timezone region="Pacific Ocean" id="Enderbury" country="Kiribati" title="Phoenix Islands Time"/>
+    <timezone region="Pacific Ocean" id="Pitcairn" country="Pitcairn Islands" title="Pitcairn Time"/>
+    <timezone region="Pacific Ocean" id="Pago Pago" country="American Samoa" title="Samoa Standard Time"/>
+    <timezone region="Pacific Ocean" id="Fakaofo" country="Tokelau" title="Tokelau Time"/>
+    <timezone region="Pacific Ocean" id="Tongatapu" country="Tonga" title="Tonga Standard Time"/>
+
+
+    <timezone region="South America" id="Rio Branco" country="Brazil" title="Acre Standard Time"/>
+    <timezone region="South America" id="Campo Grande" country="Brazil" title="Amazon Standard Time"/>
+    <timezone region="South America" id="Buenos Aires" country="Argentina" title="Argentina Standard Time"/>
+    <timezone region="South America" id="Grand Turk" country="Turks and Caicos Islands" title="Atlantic Standard Time"/>
+    <timezone region="South America" id="Santo Domingo" country="Dominican Republic" title="Atlantic Standard Time"/>
+    <timezone region="South America" id="La Paz" country="Boliva" title="Bolivia Standard Time"/>
+    <timezone region="South America" id="Araguaina" country="Brazil" title="Brasilia Standard Time"/>
+    <timezone region="South America" id="Bahia" country="Brazil" title="Brasilia Standard Time"/>
+    <timezone region="South America" id="Fortaleza" country="Brazil" title="Brasilia Standard Time"/>
+    <timezone region="South America" id="Sao Paulo" country="Brazil" title="Brasilia Standard Time"/>
+    <timezone region="South America" id="Santiago" country="Chile" title="Chile Standard Time"/>
+    <timezone region="South America" id="Havana" country="Cuba" title="Cuba Standard Time"/>
+    <timezone region="South America" id="Nassau" country="Bahamas" title="Eastern Standard Time"/>
+    <timezone region="South America" id="Panama" country="Panama" title="Eastern Standard Time"/>
+    <timezone region="South America" id="Port-au-Prince" country="Haiti" title="Eastern Standard Time"/>
+    <timezone region="South America" id="Noronha" country="Brazil" title="Fernando de Noronha Standard Time"/>
+    <timezone region="South America" id="Punta Atenas" country="Chile" title="GMT-03:30"/>
+    <timezone region="South America" id="Asuncion" country="Paraguay" title="Paraguay Standard Time"/>
+    <timezone region="South America" id="Lima" country="Peru" title="Peru Standard Time"/>
+    <timezone region="South America" id="Montevideo" country="Uruguay" title="Uruguay Standard Time"/>
+    <timezone region="South America" id="Caracas" country="Venezuela" title="Venezuela Time"/>
+    <timezone region="South America" id="San Luis" country="Argentina" title="Western Argentina Standard Time"/>
+
+
+</resources>
