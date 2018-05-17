@@ -11,8 +11,7 @@ import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.edong.myechoshow.ui.settings.bluetooth.BlueConnectTask;
-import com.edong.myechoshow.ui.settings.db.BT;
+
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -9,7 +9,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.edong.myechoshow.ui.displaycard.bean.TemplateRuntimeDirective;
+import com.zdd.myutil.view.weather.icon.Cloudy;
+import com.zdd.myutil.view.weather.icon.Lightning;
+import com.zdd.myutil.view.weather.icon.PartCloudy;
+import com.zdd.myutil.view.weather.icon.Rain;
+import com.zdd.myutil.view.weather.icon.Sun;
+
 
 /**
  * Created by yd on 2018/4/26.
@@ -87,18 +92,18 @@ public class SecondPageWeather extends ViewGroup {
     }
 
     private void initData(){
-        if (templateRuntimeDirective!=null)
-        for (int i = 0;i<viewCount;i++){
-            viewType[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                    .get(i+4).getImage().getContentDescription();
-            dates[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                    .get(i+4).getDay();
-            highTemps[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                    .get(i+4).getHighTemperature();
-            lowTemps[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                    .get(i+4).getLowTemperature();
-        }
-        initview();
+//        if (templateRuntimeDirective!=null)
+//        for (int i = 0;i<viewCount;i++){
+//            viewType[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                    .get(i+4).getImage().getContentDescription();
+//            dates[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                    .get(i+4).getDay();
+//            highTemps[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                    .get(i+4).getHighTemperature();
+//            lowTemps[i]=templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                    .get(i+4).getLowTemperature();
+//        }
+//        initview();
     }
     private void initview() {
         removeAllViews();
@@ -123,13 +128,13 @@ public class SecondPageWeather extends ViewGroup {
 
     }
 
-    private TemplateRuntimeDirective templateRuntimeDirective;
-
-    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
-        this.templateRuntimeDirective = templateRuntimeDirective;
-        initData();
-        postInvalidate();
-    }
+//    private TemplateRuntimeDirective templateRuntimeDirective;
+//
+//    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
+//        this.templateRuntimeDirective = templateRuntimeDirective;
+//        initData();
+//        postInvalidate();
+//    }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {

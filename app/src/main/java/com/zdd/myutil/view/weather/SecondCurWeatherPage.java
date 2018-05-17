@@ -10,7 +10,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.edong.myechoshow.ui.displaycard.bean.TemplateRuntimeDirective;
+
+import com.zdd.myutil.view.weather.icon.Cloudy;
+import com.zdd.myutil.view.weather.icon.Lightning;
+import com.zdd.myutil.view.weather.icon.PartCloudy;
+import com.zdd.myutil.view.weather.icon.Rain;
+import com.zdd.myutil.view.weather.icon.Sun;
 
 /**
  * Created by yd on 2018/4/27.
@@ -82,12 +87,12 @@ public class SecondCurWeatherPage extends ViewGroup {
     }
 
     private void initData(){
-        if (templateRuntimeDirective!=null) {
-            highTemp = templateRuntimeDirective.getDirective().getPayload().getHighTemperature().getValue();
-            lowTemp = templateRuntimeDirective.getDirective().getPayload().getLowTemperature().getValue();
-            viewType = templateRuntimeDirective.getDirective().getPayload().getCurrentWeatherIcon().getContentDescription();
-            initview();
-        }
+//        if (templateRuntimeDirective!=null) {
+//            highTemp = templateRuntimeDirective.getDirective().getPayload().getHighTemperature().getValue();
+//            lowTemp = templateRuntimeDirective.getDirective().getPayload().getLowTemperature().getValue();
+//            viewType = templateRuntimeDirective.getDirective().getPayload().getCurrentWeatherIcon().getContentDescription();
+//            initview();
+//        }
     }
     private void initview() {
         removeAllViews();
@@ -115,13 +120,13 @@ public class SecondCurWeatherPage extends ViewGroup {
         postInvalidate();
     }
 
-    private TemplateRuntimeDirective templateRuntimeDirective;
-
-    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
-        this.templateRuntimeDirective = templateRuntimeDirective;
-        initData();
-
-    }
+//    private TemplateRuntimeDirective templateRuntimeDirective;
+//
+//    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
+//        this.templateRuntimeDirective = templateRuntimeDirective;
+//        initData();
+//
+//    }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {

@@ -9,7 +9,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.edong.myechoshow.ui.displaycard.bean.TemplateRuntimeDirective;
+import com.zdd.myutil.view.weather.icon.Cloudy;
+import com.zdd.myutil.view.weather.icon.Lightning;
+import com.zdd.myutil.view.weather.icon.PartCloudy;
+import com.zdd.myutil.view.weather.icon.Rain;
+import com.zdd.myutil.view.weather.icon.Sun;
+
 
 /**
  * Created by yd on 2018/4/26.
@@ -89,20 +94,20 @@ public class FirstPageWeather extends ViewGroup {
     }
 
     private void initData(){
-        if (templateRuntimeDirective!=null) {
-            for (int i = 0; i < viewCount; i++) {
-                viewType[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                        .get(i).getImage().getContentDescription();
-                dates[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                        .get(i).getDay();
-                highTemps[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                        .get(i).getHighTemperature();
-                lowTemps[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
-                        .get(i).getLowTemperature();
-            }
-            initview();
-            postInvalidate();
-        }
+//        if (templateRuntimeDirective!=null) {
+//            for (int i = 0; i < viewCount; i++) {
+//                viewType[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                        .get(i).getImage().getContentDescription();
+//                dates[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                        .get(i).getDay();
+//                highTemps[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                        .get(i).getHighTemperature();
+//                lowTemps[i] = templateRuntimeDirective.getDirective().getPayload().getWeatherForecast()
+//                        .get(i).getLowTemperature();
+//            }
+//            initview();
+//            postInvalidate();
+//        }
     }
     private void initview() {
 
@@ -127,12 +132,12 @@ public class FirstPageWeather extends ViewGroup {
         }
     }
 
-    private TemplateRuntimeDirective templateRuntimeDirective;
-
-    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
-        this.templateRuntimeDirective = templateRuntimeDirective;
-        initData();
-    }
+//    private TemplateRuntimeDirective templateRuntimeDirective;
+//
+//    public void setTemplateRuntimeDirective(TemplateRuntimeDirective templateRuntimeDirective){
+//        this.templateRuntimeDirective = templateRuntimeDirective;
+//        initData();
+//    }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {

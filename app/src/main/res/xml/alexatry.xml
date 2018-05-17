@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <try text="Play the top pop station"/>
+    <try text="Play the latest Bruno Mars album"/>
+    <try text="Play the top songs this week"/>
+    <try text="Play the songs with the lyrics Hello from the other side"/>
+    <try text="Play the top rock songs from 1988"/>
+    <try text="Play children's music"/>
+    <try text="Play happy funk from the 70s"/>
+    <try text="Play classical music"/>
+    <try text="Play fast music"/>
+    <try text="Play the top songs from 1994 to 1998"/>
+    <try text="Play popular country from last year"/>
+    <try text="Play U2 from the 80s"/>
+    <try text="Play Hold On, We're Going Home by Drake"/>
+    <try text="Play some jazz"/>
+    <try text="Play some study music"/>
+    <try text="Play Coldplay from 2010 to 2014"/>
+    <try text="Play the most popular Pearl Jam album"/>
+    <try text="Play rock songs from my library"/>
+
+
+    <try text="What time is it?"/>
+    <try text="What time is it in Tokyo?"/>
+    <try text="When is Veterans Day?"/>
+    <try text="How many days until summer?"/>
+    <try text="How many ounces in a cup?"/>
+    <try text="How many euros in a dollar?"/>
+    <try text="How far is 5 kilometers in miles?"/>
+    <try text="What's the status of Alaska Flight 894?"/>
+    <try text="What's the status of Delta Flight 1212?"/>
+    <try text="How old is Chuck Norris?"/>
+    <try text="What's the capital of Costa Rica?"/>
+    <try text="How many people live in Wyoming?"/>
+    <try text="How do you spell... misspell?"/>
+    <try text="What's the definition of adept?"/>
+    <try text="Tell me another word for helpful"/>
+    <try text="When was Harry Potter published?"/>
+    <try text="When was the Handmaid's tale written?"/>
+    <try text="Who wrote the book Moneyball?"/>
+    <try text="What's 99 divided by 12?"/>
+    <try text="What's the square root of 9,801?"/>
+    <try text="What's on TV tonight?"/>
+    <try text="How far away is the moon?"/>
+    <try text="Wikipedia artificial intelligence"/>
+    <try text="Alexa, what's your favorite movie?"/>
+    <try text="What's the difference between Under Pressure and Ice Ice Baby?"/>
+
+    <try text="How do you make chocolate chip cookies?"/>
+    <try text="Find easy dinner recipes"/>
+    <try text="Tell me a recipe for macaroni salad"/>
+    <try text="Find vegetarian recipes"/>
+    <try text="Find recipes that take less than 30 minutes"/>
+    <try text="What can I make with chicken and spinach?"/>
+
+    <try text="read my Audible book"/>
+    <try text="read The Hobbit"/>
+    <try text="what’s free from Audible?"/>
+    <try text="sign-up for Audible"/>
+    <try text="read my Kindle book"/>
+    <try text="tell me a quote"/>
+    <try text="what are the most popular books this week?"/>
+    <try text="who wrote Money Ball?"/>
+
+    <try text="How's my day look?"/>
+    <try text="Add a 2:00 PM meeting to my calendar"/>
+    <try text="What's my next appointment?"/>
+    <try text="show my calendar"/>
+
+    <try text="connect my phone"/>
+
+    <try text="play Jeopardy!"/>
+    <try text="open the Magic Door"/>
+    <try text="open Thunderstorm Sounds"/>
+    <try text="ask Mindfulness for a minute meditation"/>
+    <try text="start seven minute workout"/>
+    <try text="tell food tracker to log a glass of milk"/>
+    <try text="ask Washington Post for headlines"/>
+    <try text="ask SYFY Wire for the latest news"/>
+    <try text="what are your popular skills?"/>
+    <try text="what new skills do you have?"/>
+
+
+    <try text="What's a good Mexican restaurant nearby?"/>
+    <try text="What's the phone number for a pharmacy?"/>
+    <try text="Is the post office open?"/>
+    <try text="show me nearby restaurants"/>
+
+    <try text="What’s my commute?"/>
+    <try text="How is traffic to the airport?"/>
+
+    <try text="Sing a song"/>
+    <try text="Rap for me"/>
+    <try text="Tell me a story"/>
+    <try text="Tell me a joke"/>
+    <try text="Tell me a pet joke"/>
+    <try text="Tell me a Star Trek joke"/>
+    <try text="Play a game"/>
+    <try text="Roll two dice"/>
+    <try text="Play Rock, Paper, Scissors"/>
+    <try text="Play Rock, Paper, Scissors, Lizard, Spock"/>
+    <try text="Where is Chuck Norris?"/>
+    <try text="Who you gonna call?"/>
+    <try text="Give me an Easter egg"/>
+
+    <try text="Will it rain tomorrow?"/>
+    <try text="What's the weather in Honolulu?"/>
+    <try text="Is it sunny in Philadelphia?"/>
+    <try text="show the weather forecast"/>
+
+    <try text="What movies are playing?"/>
+    <try text="When will Star Wars play?"/>
+    <try text="Tell me about the movie The Wall"/>
+    <try text="What comedies are playing Saturday night?"/>
+    <try text="show the trailer for The Big Sick"/>
+
+    <try text="What's in the news?"/>
+    <try text="What's new?"/>
+    <try text="Play NPR"/>
+
+    <try text="play NPR"/>
+    <try text="play the podcast RadioLab"/>
+    <try text="Play 90.3 FM on TuneIn"/>
+    <try text="Play Fox Sports Radio on iHeartRadio"/>
+
+    <try text="set an alarm for 7:00 AM"/>
+    <try text="When is my alarm set?"/>
+    <try text="Cancel the alarm"/>
+    <try text="Set a weekday alarm"/>
+    <try text="Set a repeating Monday alarm"/>
+    <try text="Set an alarm to Adele everday"/>
+    <try text="Set an alarm to Adele"/>
+    <try text="Wake me up to country music"/>
+    <try text="Set an alarm to BBC News on TuneIn"/>
+    <try text="Wake me up to Kiss FM on TuneIn"/>
+    <try text="Wake me up to relaxing music"/>
+    <try text="Wake me up to pop music for running"/>
+    <try text="Wake me up with Location by Khalid"/>
+    <try text="Wake me up to the song that goes... I've paid my dues time after time"/>
+    <try text="Alexa wake me up to 80's music"/>
+
+    <try text="Remind me to take out the recycling"/>
+    <try text="Remind me to call Mom every Sunday"/>
+    <try text="Remind me to walk the dog every day"/>
+    <try text="Remind me to pick up the kids every weekday at 3:00 PM"/>
+    <try text="What are my reminders?"/>
+    <try text="show my reminders"/>
+
+    <try text="Set a timer for 10 minutes"/>
+    <try text="How much time is left on my timer?"/>
+    <try text="What timers are set?"/>
+    <try text="Cancel the timer"/>
+    <try text="Set an egg timer for 3 minutes"/>
+    <try text="Set a 7 minute workout timer"/>
+    <try text="Set a homework timer for 30 minutes"/>
+    <try text="show my timers"/>
+
+    <try text="what can I say?"/>
+    <try text="Play music"/>
+    <try text="Turn up the volume"/>
+    <try text="Give me a tip"/>
+    <try text="What are your new features?"/>
+    <try text="Good morning"/>
+    <try text="Tell me a joke"/>
+    <try text="Star Wars or Star Trek?"/>
+    <try text="who's your favorite superhero?"/>
+    <try text="what is FreeTime?"/>
+
+
+</resources>

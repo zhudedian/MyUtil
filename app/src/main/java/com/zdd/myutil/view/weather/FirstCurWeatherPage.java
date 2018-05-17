@@ -9,6 +9,11 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.zdd.myutil.view.weather.icon.Cloudy;
+import com.zdd.myutil.view.weather.icon.Lightning;
+import com.zdd.myutil.view.weather.icon.PartCloudy;
+import com.zdd.myutil.view.weather.icon.Rain;
+import com.zdd.myutil.view.weather.icon.Sun;
 
 
 /**

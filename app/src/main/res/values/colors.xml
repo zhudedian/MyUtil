@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#fff</color>
+    <color name="lightbar_mid">#00FFFF</color>
+    <color name="settings_back">#191a23</color>
+    <color name="settings_item_driver">#a6666873</color>
+    <color name="round_check">#74c4fa</color>
+    <color name="viewpager_tab_gray">#5fe9e9e9</color>
+    <color name="freshview">#36adf7</color>
+    <color name="orange">#FFA500</color> <!--橙色 -->
 </resources>

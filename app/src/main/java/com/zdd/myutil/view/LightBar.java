@@ -16,7 +16,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
-import com.edong.myechoshow.R;
+import com.zdd.myutil.R;
+
 
 /**
  * Created by yd on 2018/5/4.
