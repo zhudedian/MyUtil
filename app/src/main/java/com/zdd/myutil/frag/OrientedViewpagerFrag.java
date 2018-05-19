@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.zdd.annotation.FindId;
+import com.zdd.api.AnnotationUtil;
 import com.zdd.myutil.MainActivity;
 import com.zdd.myutil.R;
 import com.zdd.myutil.view.TestView;
@@ -22,13 +24,16 @@ import java.util.List;
  * Created by yd on 2018/5/17.
  */
 
+@FindId(R.layout.frag_viewpager_oriented)
 public class OrientedViewpagerFrag extends MyFrag {
 
-    private OrientedViewPager mOrientedViewPager;
+    @FindId(R.id.oriented_viewpager)
+    OrientedViewPager mOrientedViewPager;
     private List<View> views = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_viewpager_oriented, null);
+        AnnotationUtil.inject(this,view);
         mOrientedViewPager = (OrientedViewPager) view.findViewById(R.id.oriented_viewpager);
 //设置viewpager的方向为竖直
         mOrientedViewPager.setOrientation(OrientedViewPager.Orientation.VERTICAL);
