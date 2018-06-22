@@ -17,11 +17,13 @@ public class ProxyInfo {
      * 类
      */
     public TypeElement typeElement;
+    public ExecutableElement executableElement;
     /**
      * 类注解的值(布局id)
      */
     public int value;
     public String packageName;
+    public String superClsName;
     /**
      * key为id，也就是成员变量注解的值，value为对应的成员变量
      */
@@ -36,10 +38,12 @@ public class ProxyInfo {
     public static final String ClassSuffix = "_" + PROXY;
 
     public String getProxyClassFullName() {
+
         return typeElement.getQualifiedName().toString() + ClassSuffix;
     }
 
     public String getClassName() {
+
         return typeElement.getSimpleName().toString() + ClassSuffix;
     }
 
@@ -79,16 +83,30 @@ public class ProxyInfo {
             builder.append("(" + type + ")object.findViewById(" + id + ");\n");
         }
 
+        int i = 1;
         for (int id : mInjectMethods.keySet()) {
             ExecutableElement executableElement = mInjectMethods.get(id);
             VariableElement variableElement = mInjectElements.get(id);
-            String name = variableElement.getSimpleName().toString();
-            builder.append("        host." + name + ".setOnClickListener(new View.OnClickListener(){\n");
-            builder.append("            @Override\n");
-            builder.append("            public void onClick(View v) {\n");
-            builder.append("                host." + executableElement.getSimpleName().toString() + "(host." + name + ");\n");
-            builder.append("            }\n");
-            builder.append("        });\n");
+            if (variableElement==null){
+                builder.append("        final View view" + i + " = ");
+                builder.append("(View)object.findViewById(" + id + ");\n");
+                builder.append("        view" + i + ".setOnClickListener(new View.OnClickListener(){\n");
+                builder.append("            @Override\n");
+                builder.append("            public void onClick(View v) {\n");
+                builder.append("                host." + executableElement.getSimpleName().toString() + "(view" + i + ");\n");
+                builder.append("            }\n");
+                builder.append("        });\n");
+                i++;
+            }else {
+                String name = variableElement.getSimpleName().toString();
+                builder.append("        host." + name + ".setOnClickListener(new View.OnClickListener(){\n");
+                builder.append("            @Override\n");
+                builder.append("            public void onClick(View v) {\n");
+                builder.append("                host." + executableElement.getSimpleName().toString() + "(host." + name + ");\n");
+                builder.append("            }\n");
+                builder.append("        });\n");
+            }
+
         }
 
         builder.append("    }\n");

@@ -21,6 +21,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    task makeJar(type: Copy) {
+        delete 'build/libs/my_api.jar'
+        from('build/intermediates/bundles/default/')
+        into('build/libs/')
+        include('classes.jar')
+        rename ('classes.jar', 'my_api.jar')
+    }
+
+    makeJar.dependsOn(build)
 
 }
 
@@ -31,6 +40,5 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile project(':compile')
 }

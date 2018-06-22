@@ -110,6 +110,8 @@ public class AProcessor extends AbstractProcessor {
                 String qualifiedName = typeElement.getQualifiedName().toString();
                 /*类名*/
                 String clsName = typeElement.getSimpleName().toString();
+                /*父类名*/
+                String superClsName = typeElement.getSuperclass().toString();
                 /*获取包名*/
                 String packageName = mElementUtils.getPackageOf(typeElement).getQualifiedName().toString();
 

@@ -15,6 +15,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textSize="40sp"
+    android:text="123456"
+
     />
     <TextView
         android:id="@+id/textview2"
@@ -22,6 +24,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="300dp"
         android:textSize="40sp"
+        android:text="生命中有很多东西"
+
         />
 
 </RelativeLayout>

@@ -3,6 +3,14 @@ apply plugin: 'java-library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
+task makeJar(type: Copy) {
+    delete 'build/libs/my_annotation.jar'
+    from('build/intermediates/bundles/default/')
+    into('build/libs/')
+    include('classes.jar')
+    rename ('classes.jar', 'my_annotation.jar')
+}
 
+makeJar.dependsOn(build)
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
