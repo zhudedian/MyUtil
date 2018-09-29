@@ -1,1 +1,1 @@
-include ':app', ':compile', ':api', ':annotation'
+include ':app', ':compile', ':api', ':annotation', ':pocketsphinx', ':aars', ':andserver3', ':andserver'

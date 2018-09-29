@@ -17,7 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -33,6 +37,7 @@ dependencies {
 
     compile project(':annotation')
     compile project(':api')
-
+    compile project(':aars')
+    compile project(':andserver3')
 
 }

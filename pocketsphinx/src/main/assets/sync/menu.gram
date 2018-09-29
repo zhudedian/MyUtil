@@ -1,0 +1,5 @@
+#JSGF V1.0;
+
+grammar menu;
+
+public <item> = alexa | alex | alex's | alexei | alexi | alecs | alec | sa;
