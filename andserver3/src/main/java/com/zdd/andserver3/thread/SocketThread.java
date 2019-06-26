@@ -49,7 +49,7 @@ public class SocketThread extends Thread {
                         break;
                     }
                 }
-
+                request.setReader(reader);
 
                 PrintStream writer = new PrintStream(socket.getOutputStream());
                 HttpResponse response = new HttpResponse(writer);

@@ -1,5 +1,6 @@
 package com.zdd.andserver3.http;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ public class HttpRequest {
 
     private List<Header> headers;
 
+    private BufferedReader reader;
 
     public HttpRequest(){
         this.headers = new ArrayList<>();
@@ -27,6 +29,13 @@ public class HttpRequest {
         return headerList;
     }
 
+    public BufferedReader getReader() {
+        return reader;
+    }
+
+    public void setReader(BufferedReader reader) {
+        this.reader = reader;
+    }
 
     public Header getFirstHeader(String name){
         for (int i=0;i<headers.size();i++){
